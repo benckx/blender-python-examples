@@ -1,2 +1,3 @@
-# blender-python-examples
-A few examples of Python scrips for Blender
+Examples of Python scripts for Blender.
+
+Run with: `blender --python the_script.py`
