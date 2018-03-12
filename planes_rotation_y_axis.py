@@ -28,7 +28,6 @@ frame_begin = 0
 frame_end = 40
 bpy.context.scene.frame_end = frame_end
 
-i = 0
 for x in range(max_x):
     for y in range(max_y):
         plane = planes[x][y]

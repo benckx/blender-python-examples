@@ -14,4 +14,4 @@ Run with: `blender --python the_script.py`
 <img src="http://gifly.com/media_gifly/e/m/m/F/b/emmF.gif"/>
 
 ##### planes_rotation_xz_axis.py
-<img src="http://gifly.com/media_gifly/c/P/s/P/b/cPsP.gif"/>
+<img src="http://gifly.com//media_gifly/v/3/l/K/b/v3lK.gif"/>
