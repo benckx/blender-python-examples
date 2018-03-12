@@ -31,8 +31,12 @@ def make_blue():
 
 
 def set_material(obj, mat):
-    me = obj.data
-    me.materials.append(mat)
+    if obj.data.materials:
+        # assign to 1st material slot
+        obj.data.materials[0] = mat
+    else:
+        # no slots
+        obj.data.materials.append(mat)
 
 
 # clear all existing objects (Cube, Lamp, Camera)
