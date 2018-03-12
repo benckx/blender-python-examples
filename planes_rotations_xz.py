@@ -24,7 +24,7 @@ plane_size = 2
 planes = init_basic_planes_scene(max_x, max_y, plane_size)
 
 # animate
-frame_end = 400
+frame_end = 200
 frame_begin = frame_end * 0.1
 bpy.context.scene.frame_end = frame_end
 
@@ -32,4 +32,4 @@ for x in range(max_x):
     for y in range(max_y):
         plane = planes[x][y]
         add_rotation(plane, 'x', 360, frame_begin, frame_end)
-        add_rotation(plane, 'z', 180, frame_begin, frame_end)
+        add_rotation(plane, 'z', 360, frame_begin, frame_end)

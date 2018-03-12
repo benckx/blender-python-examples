@@ -25,7 +25,7 @@ planes = init_basic_planes_scene(max_x, max_y, plane_size, cam_distance=16)
 
 # animate
 frame_begin = 0
-frame_end = 40
+frame_end = 20
 bpy.context.scene.frame_end = frame_end
 
 i = 0

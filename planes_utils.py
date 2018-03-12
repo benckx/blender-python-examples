@@ -49,18 +49,16 @@ def init_basic_planes_scene(max_x, max_y, plane_size, cam_distance=None):
     cam_rotation = (0, math.radians(180), math.radians(180))
     bpy.ops.object.camera_add(location=(cam_x, cam_y, cam_z), rotation=cam_rotation)
 
-    # create light
-    margin = max_x * 5
-    x_border = max_x * 2
-    y_border = max_y * 2
-    light_z = -30
+    # one light in the middle of each side of the rectangle, at the same distance
+    distance_from_planes = 40
+    locations = []
+    locations.append((-distance_from_planes, max_y * plane_size / 2))
+    locations.append((max_x * plane_size / 2, -distance_from_planes))
+    locations.append((max_x * plane_size + distance_from_planes, max_y * plane_size / 2))
+    locations.append((max_x * plane_size / 2, max_y * plane_size + distance_from_planes))
 
-    # x
-    bpy.ops.object.lamp_add(type='AREA', location=(cam_x, -margin, light_z), rotation=cam_rotation)
-    bpy.ops.object.lamp_add(type='AREA', location=(cam_x, margin + y_border, light_z), rotation=cam_rotation)
-
-    # y
-    bpy.ops.object.lamp_add(type='AREA', location=(-margin, cam_y, light_z), rotation=cam_rotation)
-    bpy.ops.object.lamp_add(type='AREA', location=(margin + x_border, cam_y, light_z), rotation=cam_rotation)
+    light_z = -40
+    for location in locations:
+        bpy.ops.object.lamp_add(type='AREA', location=(location[0], location[1], light_z), rotation=cam_rotation)
 
     return planes
