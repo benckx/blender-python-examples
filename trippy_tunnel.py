@@ -89,7 +89,7 @@ for torus in tunnel_torus:
     else:
         count = 0
 
-# move and rotate torus
+# place tunnel torus
 pos_x = 0
 pos_y = 0
 pos_z = 0
