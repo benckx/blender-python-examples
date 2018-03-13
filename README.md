@@ -5,7 +5,7 @@ Run with: `blender --python the_script.py`
 
 ## Scripts
 ##### [trippy_tunnel.py](trippy_tunnel.py)
-TODO: GIF
+<img src="http://gifly.com//media_gifly/E/1/E/G/b/E1EG.gif"/>
 
 ##### [planes_rotation_x_axis.py](planes_rotation_x_axis.py)
 <img src="http://gifly.com//media_gifly/F/u/g/6/b/Fug6.gif"/>
@@ -17,4 +17,4 @@ TODO: GIF
 <img src="http://gifly.com/media_gifly/e/m/m/F/b/emmF.gif"/>
 
 ##### [planes_rotation_xz_axis.py](planes_rotation_xz_axis.py)
-TODO: GIF
+<img src="http://gifly.com//media_gifly/n/7/j/V/b/n7jV.gif"/>

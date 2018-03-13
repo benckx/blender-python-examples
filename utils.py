@@ -57,21 +57,24 @@ def clear_scene():
     bpy.ops.object.delete()
 
 
-def insert_keyframe(obj, data_path, frame):
-    for i in range(3):
+def _insert_keyframe(obj, data_path, frame, indexes):
+    if indexes is None:
+        indexes = [0, 1, 2]
+
+    for i in indexes:
         obj.keyframe_insert(data_path, index=i, frame=frame)
 
 
-def insert_location_keyframe(obj, frame):
-    insert_keyframe(obj, 'location', frame)
+def insert_location_keyframe(obj, frame, indexes=None):
+    _insert_keyframe(obj, 'location', frame, indexes)
 
 
-def insert_rotation_keyframe(obj, frame):
-    insert_keyframe(obj, 'rotation_euler', frame)
+def insert_rotation_keyframe(obj, frame, indexes=None):
+    _insert_keyframe(obj, 'rotation_euler', frame, indexes)
 
 
-def insert_scale_keyframe(obj, frame):
-    insert_keyframe(obj, 'scale', frame)
+def insert_scale_keyframe(obj, frame, indexes=None):
+    _insert_keyframe(obj, 'scale', frame, indexes)
 
 
 def add_rotation(obj, axis, angle, frame_begin, frame_end):
@@ -79,3 +82,7 @@ def add_rotation(obj, axis, angle, frame_begin, frame_end):
     obj.keyframe_insert('rotation_euler', index=axis_int, frame=frame_begin)
     obj.rotation_euler[axis_int] = math.radians(angle)
     obj.keyframe_insert('rotation_euler', index=axis_int, frame=frame_end)
+
+
+def get_polar_coordinates(radius, angle):
+    return radius * math.cos(angle), radius * math.sin(angle)
