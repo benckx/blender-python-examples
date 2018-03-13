@@ -21,7 +21,7 @@ max_x = 6
 max_y = 6
 plane_size = 2
 
-planes = init_basic_planes_scene(max_x, max_y, plane_size, cam_distance=16)
+planes = init_basic_planes_scene(max_x, max_y, plane_size)
 
 # animate
 frame_begin = 0

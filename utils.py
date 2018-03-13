@@ -39,6 +39,15 @@ def set_material(obj, mat):
         obj.data.materials.append(mat)
 
 
+def get_objects(prefix):
+    result = []
+    for o in bpy.data.objects:
+        if o.name.startswith(prefix):
+            result.append(o)
+
+    return result
+
+
 # clear all existing objects (Cube, Lamp, Camera)
 def clear_scene():
     bpy.ops.object.select_all(action='DESELECT')
@@ -46,6 +55,23 @@ def clear_scene():
         obj.select = True
 
     bpy.ops.object.delete()
+
+
+def insert_keyframe(obj, data_path, frame):
+    for i in range(3):
+        obj.keyframe_insert(data_path, index=i, frame=frame)
+
+
+def insert_location_keyframe(obj, frame):
+    insert_keyframe(obj, 'location', frame)
+
+
+def insert_rotation_keyframe(obj, frame):
+    insert_keyframe(obj, 'rotation_euler', frame)
+
+
+def insert_scale_keyframe(obj, frame):
+    insert_keyframe(obj, 'scale', frame)
 
 
 def add_rotation(obj, axis, angle, frame_begin, frame_end):

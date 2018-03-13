@@ -14,15 +14,15 @@ def create_planes(max_x, max_y, plane_size):
             bpy.ops.mesh.primitive_plane_add(location=(x * plane_size, y * plane_size, 0))
 
     # 2 dimensional array
-    my_planes = [[0 for x in range(max_x)] for y in range(max_y)]
+    planes = [[0 for x in range(max_y)] for y in range(max_x)]
 
     # put my planes in the array
     for obj in bpy.data.objects:
         x = int(obj.location.x / plane_size)
         y = int(obj.location.y / plane_size)
-        my_planes[x][y] = obj
+        planes[x][y] = obj
 
-    return my_planes
+    return planes
 
 
 def init_basic_planes_scene(max_x, max_y, plane_size, cam_distance=None):
@@ -41,7 +41,7 @@ def init_basic_planes_scene(max_x, max_y, plane_size, cam_distance=None):
     cam_x = max_x - plane_size / 2
     cam_y = max_y - plane_size / 2
     if cam_distance is None:
-        cam_z = -(max_x * 2)
+        cam_z = -((max_x + 2) * 2)
     else:
         cam_z = -cam_distance
 
