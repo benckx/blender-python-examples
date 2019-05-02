@@ -1,21 +1,20 @@
 ## About
-Simple examples of Blender animations made with Python scripts.
+Simple examples of Blender animations based on Python scripts.
 
-Run with: `blender --python the_script.py`
+## How to
+Open in Blender: `blender --python the_script.py`
+
+Convert to GIF: `convert -delay 4 -loop 0 *.png animation.gif`
 
 ## Scripts
 ##### [trippy_tunnel.py](trippy_tunnel.py)
-<!--<img src="http://gifly.com//media_gifly/E/1/E/G/b/E1EG.gif"/>-->
-<img src="https://thumbs.gfycat.com/FarawayNiftyCrownofthornsstarfish-max-1mb.gif"/>
+![](images/trippy.gif)
 
 ##### [planes_rotation_x_axis.py](planes_rotation_x_axis.py)
-<img src="http://gifly.com//media_gifly/F/u/g/6/b/Fug6.gif"/>
-
-##### [planes_rotation_y_axis.py](planes_rotation_y_axis.py)
-<img src="http://gifly.com/media_gifly/D/r/u/3/b/Dru3.gif"/>
+![](images/x_axis.gif)
 
 ##### [planes_rotation_z_axis.py](planes_rotation_z_axis.py)
-<img src="http://gifly.com/media_gifly/e/m/m/F/b/emmF.gif"/>
+![](images/z_axis.gif)
 
 ##### [planes_rotations_xz.py](planes_rotations_xz.py)
-<img src="http://gifly.com//media_gifly/n/7/j/V/b/n7jV.gif"/>
+![](images/xz.gif)
