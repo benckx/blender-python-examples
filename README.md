@@ -1,3 +1,7 @@
+<a href="https://paypal.me/benckx/2">
+<img src="https://img.shields.io/badge/Donate-PayPal-green.svg"/>
+</a>
+
 ## About
 Simple examples of Blender animations based on Python scripts.
 
